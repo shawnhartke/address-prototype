@@ -12,6 +12,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { AddressComponent } from './address/address.component';
 
 @NgModule({
   imports:      [ 
@@ -25,7 +26,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatDatepickerModule
     
     ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [ AppComponent, HelloComponent, AddressComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
