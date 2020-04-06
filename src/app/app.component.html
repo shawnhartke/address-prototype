@@ -1,0 +1,47 @@
+<div id="outer-shell">
+	<form class="example-form">
+
+		<!-- First Name -->
+		<div class="form-field-control">
+			<mat-form-field class="example-full-width">
+				<mat-label>First Name</mat-label>
+				<input matInput [formControl]="applicationFormControl" placeholder="Ex. John">
+				<mat-error *ngIf="applicationFormControl.hasError('required')">
+					First Name is <strong>required</strong>
+				</mat-error>
+			</mat-form-field>
+		</div>
+
+		<!-- Middle Name -->
+		<div class="form-field-control">
+			<mat-form-field class="example-full-width">
+				<mat-label>Middle Name</mat-label>
+				<input matInput [formControl]="applicationFormControl" placeholder="Ex. John">
+				<mat-error *ngIf="applicationFormControl.hasError('required')">
+					First Name is <strong>required</strong>
+				</mat-error>
+			</mat-form-field>
+		</div>
+
+		<!-- Last Name -->
+		<div class="form-field-control">
+			<mat-form-field class="example-full-width">
+				<mat-label>Last Name</mat-label>
+				<input matInput [formControl]="applicationFormControl" placeholder="Ex. John">
+				<mat-error *ngIf="applicationFormControl.hasError('required')">
+					First Name is <strong>required</strong>
+				</mat-error>
+			</mat-form-field>
+		</div>
+
+		<div class="form-field-control">
+			<mat-form-field>
+				<mat-label>Choose a date</mat-label>
+				<input matInput [matDatepicker]="picker">
+				<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+				<mat-datepicker #picker></mat-datepicker>
+			</mat-form-field>
+		</div>
+
+	</form>
+</div>
