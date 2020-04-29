@@ -1,0 +1,66 @@
+<!-- <div class="main-header">Apply and get instant results</div>
+<div class="secondary-header">Increase your purchasing power with no credit needed.</div> -->
+<app-page-title pageTitle="Apply and get instant results"> </app-page-title>
+<form class="contact-info-form"> 
+    <div class="field-spacer first-name">
+        <pg-field>
+          <label pgLabel>
+            First name
+          </label>
+          <input id="first-name" pgInput #firstNameInput="pgInput" formControlName="firstName" maxlength="40"/>
+          <pg-suffix-icons>
+            <pg-icon id="first-name-icon-checkmark" pgSuffixIcon class="fg-green500" [visible]="!firstNameInput.isFocused && firstNameInput.value && !firstNameInput.isError">done</pg-icon>
+            <pg-icon id="first-name-icon-error" pgSuffixIcon class="fg-red500" [visible]="firstNameInput.isError">warning</pg-icon>
+          </pg-suffix-icons>
+          <pg-subscript-messages>
+            <span id="first-name-err-required" pgValidationErrorTracker pgError for="required">First name is required</span>
+            <span id="first-name-err-letter" pgValidationErrorTracker pgError for="startsWithLetter">First Name must be a letter</span>
+            <span id="first-name-err-space" pgValidationErrorTracker pgError for="startsWithSpace">First name cannot start with a space</span>
+          </pg-subscript-messages>
+        </pg-field>
+      </div>
+
+      <div class="field-spacer last-name">
+        <pg-field>
+          <label pgLabel>
+            Last name
+          </label>
+          <input id="last-name" pgInput #lastNameInput="pgInput" formControlName="lastName" maxlength="40"/>
+          <pg-suffix-icons>
+            <pg-icon id="last-name-icon-checkmark" pgSuffixIcon class="fg-green500" [visible]="!lastNameInput.isFocused && lastNameInput.value && !lastNameInput.isError">done</pg-icon>
+            <pg-icon id="last-name-icon-error" pgSuffixIcon class="fg-red500" [visible]="lastNameInput.isError">warning</pg-icon>
+          </pg-suffix-icons>
+          <pg-subscript-messages>
+            <span id="last-name-err-required" pgValidationErrorTracker pgError for="required">Last name is required</span>
+          </pg-subscript-messages>
+        </pg-field>
+      </div>
+
+
+    <div class="field-spacer">
+      <pg-field>
+        <label pgLabel>
+          Date of birth
+        </label>
+        <input
+          id="dob"
+          pgInput
+          #dateOfBirth="pgInput"
+          formControlName="dateOfBirth"
+        
+          type="tel"
+          placeholder="MM/DD/YYYY"
+        />
+        <pg-prefix-icons [iconDisplayOption]="1">
+          <pg-icon pgPrefixIcon>cake</pg-icon>
+        </pg-prefix-icons>
+        <pg-suffix-icons>
+          <pg-icon id="dob-icon-checkmark" pgSuffixIcon class="fg-green500" [visible]="!dateOfBirth.isFocused && dateOfBirth.value && !dateOfBirth.isError">done</pg-icon>
+          <pg-icon id="dob-icon-error" pgSuffixIcon class="fg-red500" [visible]="dateOfBirth.isError">warning</pg-icon>
+        </pg-suffix-icons>
+        <pg-subscript-messages>
+          <span id="dob-err-required" pgValidationErrorTracker pgError for="required">Birthday is required</span>
+        </pg-subscript-messages>
+      </pg-field>
+    </div>
+</form>

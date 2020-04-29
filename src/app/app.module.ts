@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { MatInputModule } from '@angular/material/input'
 
 import {HttpClientModule} from '@angular/common/http';
@@ -13,6 +12,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { AddressComponent } from './address/address.component';
+import { BasicInfoComponent } from './basic-info/basic-info.component';
+import { AppRoutingModule } from './app-routing.module';
+import { GetStartedComponent } from './get-started/get-started.component';
+import { PgFieldModule, PgFormModule, PgIconModule } from '@progleasing/grit-core';
+import { PageTitleComponent } from './page-title/page-title.component';
 
 @NgModule({
   imports:      [ 
@@ -23,10 +27,20 @@ import { AddressComponent } from './address/address.component';
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    MatDatepickerModule
-    
+    MatDatepickerModule,
+    AppRoutingModule,
+    PgFieldModule,
+    PgFormModule,
+    PgIconModule
     ],
-  declarations: [ AppComponent, HelloComponent, AddressComponent ],
+  declarations: [ 
+    AppComponent, 
+    AddressComponent,
+     BasicInfoComponent, 
+     GetStartedComponent, 
+     PageTitleComponent,
+     PageTitleComponent
+     ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

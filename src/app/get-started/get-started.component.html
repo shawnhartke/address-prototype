@@ -1,0 +1,28 @@
+<!-- <div class="main-header">Apply and get instant results</div>
+<div class="secondary-header">Increase your purchasing power with no credit needed.</div> -->
+<app-page-title pageTitle="Apply and get instant results"
+	pageSubTitle="Increase your purchasing power with no credit needed.">
+</app-page-title>
+
+<div class="get-started-form" [formGroup]="getStartedFormGroup">
+	<div class="field-spacer email-phone-field">
+		<pg-field>
+			<label pgLabel>
+            Mobile phone or email
+          </label>
+			<input id="first-name" pgInput #firstNameInput="pgInput" formControlName="phoneOrEmail" maxlength="40"/>
+			<pg-suffix-icons>
+				<pg-icon id="first-name-icon-checkmark" pgSuffixIcon class="fg-green500"
+					[visible]="!firstNameInput.isFocused && firstNameInput.value && !firstNameInput.isError">done
+				</pg-icon>
+				<pg-icon id="first-name-icon-error" pgSuffixIcon class="fg-red500" [visible]="firstNameInput.isError">
+					warning</pg-icon>
+			</pg-suffix-icons>
+			<pg-subscript-messages>
+				<span id="first-name-err-required" pgValidationErrorTracker pgError for="required">First name is required</span>
+				<span id="first-name-err-letter" pgValidationErrorTracker pgError for="startsWithLetter">First Name must be a letter</span>
+				<span id="first-name-err-space" pgValidationErrorTracker pgError for="startsWithSpace">First name cannot start with a space</span>
+			</pg-subscript-messages>
+		</pg-field>
+	</div>
+</div>

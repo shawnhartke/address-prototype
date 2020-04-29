@@ -1,0 +1,24 @@
+.page-title {
+  width: 343px;
+  height: 19.2px;
+  color: rgb(69, 79, 91);
+  font-size: 16px;
+  font-family: Montserrat-Bold;
+  font-weight: bold;
+  letter-spacing: 0.66px;
+  line-height: 19.2px;
+  margin-top:24px;
+}
+
+.page-subtitle {
+  width: 343px;
+  height: 48px;
+  color: rgb(69, 79, 91);
+  font-size: 16px;
+  font-family: Lato-Regular;
+  font-weight: normal;
+  letter-spacing: 0.64px;
+  line-height: 24px;
+  padding-top: 8px;
+  margin-bottom: 24px;
+}
