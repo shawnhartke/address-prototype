@@ -15,7 +15,7 @@ import { AddressComponent } from './address/address.component';
 import { BasicInfoComponent } from './basic-info/basic-info.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GetStartedComponent } from './get-started/get-started.component';
-import { PgFieldModule, PgFormModule, PgIconModule } from '@progleasing/grit-core';
+import { PgFieldModule, PgFormModule, PgIconModule, PgButtonModule } from '@progleasing/grit-core';
 import { PageTitleComponent } from './page-title/page-title.component';
 
 @NgModule({
@@ -31,7 +31,8 @@ import { PageTitleComponent } from './page-title/page-title.component';
     AppRoutingModule,
     PgFieldModule,
     PgFormModule,
-    PgIconModule
+    PgIconModule,
+    PgButtonModule
     ],
   declarations: [ 
     AppComponent, 

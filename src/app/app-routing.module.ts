@@ -6,6 +6,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
 
 
 const routes: Routes = [
+  
+  { path: '', redirectTo: '/apply/get-started', pathMatch: 'full' },
   {
     path: 'apply/basic-info',
     component: BasicInfoComponent,
